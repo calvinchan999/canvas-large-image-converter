@@ -1,0 +1,19 @@
+{
+  "name": "large-image-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "sharp": "^0.32.3"
+  }
+}
