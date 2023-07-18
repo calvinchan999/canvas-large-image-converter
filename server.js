@@ -3,10 +3,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const imageRouter = require("./routes/image");
+const cors = require('cors');
 
 const port = 5100;
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 const jsonParser = bodyParser.json({
   limit: 1024 * 1024 * 20,
