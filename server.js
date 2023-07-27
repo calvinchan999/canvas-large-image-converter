@@ -13,12 +13,12 @@ const app = express();
 app.use(cors());
 
 const jsonParser = bodyParser.json({
-  limit: 1024 * 1024 * 20,
+  limit: 1024 * 1024 * 1024,
   type: "application/json",
 });
 const urlencodedParser = bodyParser.urlencoded({
   extended: true,
-  limit: 1024 * 1024 * 20,
+  limit: 1024 * 1024 * 1024,
   type: "application/x-www-form-urlencoded",
 });
 
