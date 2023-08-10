@@ -12,8 +12,14 @@ router.post("/resize", async (req, res) => {
   );
 
   // Convert the image file to a supported format (e.g. JPEG)
-  const convertedImage = await sharp(bufferImage).jpeg().toBuffer();
-  const imgData = await loadImage(convertedImage);
+  //const convertedImage = await sharp(bufferImage).jpeg().toBuffer();
+  console.log('resize image start');
+  const resizedImage = await sharp(bufferImage, {limitInputPixels: 1000000000 })
+//    .resize({ width: 4080, height: 4080 })
+    .jpeg()
+    .toBuffer();
+  console.log('resize complete');
+  const imgData = await loadImage(resizedImage);
 
   const newWidth = imgData.width * newRatio;
   const newHeight = imgData.height * newRatio;
