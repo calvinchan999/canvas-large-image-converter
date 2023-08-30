@@ -3,9 +3,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const imageRouter = require("./routes/image");
-const cors = require('cors');
+const cors = require("cors");
 
 const port = 5100;
+
+// debug
+const process = requrie("node:process");
+process.on('warning', event => console.warn(event.stack))
 
 const app = express();
 
